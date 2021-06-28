@@ -1,4 +1,4 @@
-This repo demonstrate how basic object detection algorithm works. 
+This repo demonstrate how basic object detection algorithm works. It also show a fun way to generate simulated dataset instead of using a real data.
 
 **The Model**
 
