@@ -1,16 +1,12 @@
 This repo demonstrate how basic object detection algorithm works. 
 
-**How the Algorithm works?**
+**The Model**
 
-The algorithm have two goals. Classifythe object, and localize the object.
+The algorithm have two objectives:
 
-**Classification**: "This is a monkey"   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  **Localization**: The monkey is located here"
+Classification: Determine what kind of object is in the image.
 
-<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123606801-f1e9ce80-d805-11eb-9d4e-7166959ce734.png">     &nbsp; &nbsp; &nbsp;  <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123606546-ad5e3300-d805-11eb-8361-f9b198694737.png">
-
-The classification goal is to tell what kind of object was detected. This is classification problem.
-
-The localization goal is to predict the bounding box coordinates. This is a regression problem.
+Localization: Predict the bounding box coordinates. This is a regression problem.
 
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123609268-30808880-d808-11eb-83ea-4cd2d8af38c2.png">
 
@@ -18,7 +14,7 @@ We will created VGG16 convolution model with the following outputs:
 
 - 4 outputs for location prediction. The first and second outputs will represent the left coordinate and the buttom coordinate. The third and fourth coordinate will represent the bounding box width and height.
 - K outputs for the object class prediction, where K represent the number of classes.
-- 1 outputs for the "object appeared" flag. 
+- 1 outputs for the "object appeared" flag. It will predict wheather object is exist in the image.
  
 
 **The Loss Function**
