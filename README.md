@@ -51,9 +51,10 @@ It's important to use a PNG image format since it contain the transparent channe
 
 The data generation process goes as follow:
 
-- Choose random background and random animal from the data.
+- Choose random background
+- Randomly choose if the object appear flag. If object appeard, randomly choose animal from the data.
 - Randomly flip and resize the animal image to add data augmentation. 
-- Choosing random coordinates on the background image - this is where the animal image will be paste.
+- Choose random coordinates on the background image - this is where the animal image will be paste.
 - Take a slice of the background for those coordinate. 
 - Multiple the background slice with the mask. It will change the pixel value to zero in the place where the animal is located, and won't be affected it other parts because the mask value is 1 in those areas:
 
@@ -63,9 +64,13 @@ The data generation process goes as follow:
   
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123623005-a3dcc700-d815-11eb-979b-19b17028b402.png">
 
-- Place the edited background slice back to the original position. This is the final result:
+- Place the edited background slice back to the original position. This is the final image result:
 
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123623551-3c734700-d816-11eb-9727-6e14fa802eff.png">
+
+- Create the target vector - object location, object class and the appear flag. loss calculation.
+
+- Create data generatrion function that outputs batch of images and targets. It will be used for the model training.
 
 Few examples of the random generated images:
 
@@ -74,6 +79,12 @@ Few examples of the random generated images:
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593401-22763c00-d7f7-11eb-9897-1e9770cb8059.png">
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593919-b8aa6200-d7f7-11eb-9de0-d7bd317f60c2.png">
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123594578-8d744280-d7f8-11eb-8bcb-c8436d69b415.png">
+
+
+**Results**
+
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123625781-ca503180-d818-11eb-9f72-31cbbcb1495b.png">
+
 
 
 
