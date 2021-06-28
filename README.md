@@ -83,7 +83,21 @@ Few examples of the random generated images:
 
 **Results**
 
+The loss per Epoch:
+
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123625781-ca503180-d818-11eb-9f72-31cbbcb1495b.png">
+
+Now that the model has learned to detect object, we can randmly generate images, feed it to the model and get the result. We will plot a bounding box with the predicted coordinates and will choose the predicted class according the the argmax of the classes scores. Some different examples of the final results:
+
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628041-5a8f7600-d81b-11eb-9b26-3435322fe7de.png"> <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628251-8ca0d800-d81b-11eb-85ce-4be93b0f36aa.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628418-bc4fe000-d81b-11eb-9f06-36dedf95c748.png">
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628782-28324880-d81c-11eb-9b5e-da2d676af202.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628893-4730da80-d81c-11eb-818c-c7dd388be569.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628973-5e6fc800-d81c-11eb-9d43-69fb5040821a.png">
+
+
+**Summary**
+
+We were able to get a model that works pretty good for the generated dataset. However, this model is basic and works good only for one objects images. Another downside to this model is - the scale of the object it learned to detect is dependent on the data scale. For general models that can detect multiple object at the same image with different object scales we will need to use much more complicated model. I'm working on that kind a model, called SSD. It will update (-:
+
+
 
 
 
