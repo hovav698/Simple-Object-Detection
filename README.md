@@ -43,10 +43,31 @@ Where t and p represent the target and prediction vector.
 
 For creating the model we need to have dataset that contains images of single object, and the target should contains the location coordinate, the target flag and the appear flag. In this project I decided to generate the dataset since since it's much faster to train it then using external image dataset.
 
-For generaing the dataset I've download images 
+For generaing the dataset I've download images of different animals (in png format) and backgrounds. To create the target images, i've sticked the animal image to the background.  
+It's important to use a PNG image format since it contain the transparent channel - it's the 4'th channel that contains the mask of the animal. For example, plotting the 4'th channel of the tiger image will output the following mask: 
 
-For the purpose of the project I used self generated data
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123619960-63c81500-d812-11eb-8330-ba75c52f301e.png">
 
+
+The data generation process goes as follow:
+
+- Choose random background and random animal from the data.
+- Randomly flip and resize the animal image to add data augmentation. 
+- Choosing random coordinates on the background image - this is where the animal image will be paste.
+- Take a slice of the background for those coordinate. 
+- Multiple the background slice with the mask. It will change the pixel value to zero in the place where the animal is located, and won't be affected it other parts because the mask value is 1 in those areas:
+
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123622760-4e081f00-d815-11eb-95d4-4164812f4992.png">
+
+- Add the first 3 channel of the animal image to the bacgrkound slice. Now the background slice will contain the animal only in the masked area:
+  
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123623005-a3dcc700-d815-11eb-979b-19b17028b402.png">
+
+- Place the edited background slice back to the original position. This is the final result:
+
+<img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123623551-3c734700-d816-11eb-9727-6e14fa802eff.png">
+
+Few examples of the random generated images:
 
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123592637-29507f00-d7f6-11eb-8e7e-b10ce968af46.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123592890-85b39e80-d7f6-11eb-81e7-19632bffcb49.png">
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593129-d62afc00-d7f6-11eb-8f74-8c55245c6a55.png">
