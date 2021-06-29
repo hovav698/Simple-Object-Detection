@@ -1,6 +1,7 @@
 This repo demonstrate how basic object detection algorithm works. It also shows a fun way to generate simulated dataset instead of using a real data.
 
 
+<br>
 
 **The Model**
 
@@ -37,6 +38,7 @@ The final loss will be sum of the above losses:
 
 Where t and p represent the target and prediction vector.
 
+<br>
 
 
 **Dataset Generation**
@@ -77,6 +79,7 @@ Few examples of the random generated images:
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123592637-29507f00-d7f6-11eb-8e7e-b10ce968af46.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123592890-85b39e80-d7f6-11eb-81e7-19632bffcb49.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593129-d62afc00-d7f6-11eb-8f74-8c55245c6a55.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593401-22763c00-d7f7-11eb-9897-1e9770cb8059.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123593919-b8aa6200-d7f7-11eb-9de0-d7bd317f60c2.png">
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123594578-8d744280-d7f8-11eb-8bcb-c8436d69b415.png">
 
+<br>
 
 
 **Results**
@@ -89,6 +92,7 @@ Now that the model has learned to detect object, we can randmly generate images,
 
 <img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628041-5a8f7600-d81b-11eb-9b26-3435322fe7de.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628251-8ca0d800-d81b-11eb-85ce-4be93b0f36aa.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628418-bc4fe000-d81b-11eb-9f06-36dedf95c748.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628782-28324880-d81c-11eb-9b5e-da2d676af202.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628893-4730da80-d81c-11eb-818c-c7dd388be569.png"><img width="280" alt="RTST" src="https://user-images.githubusercontent.com/71300410/123628973-5e6fc800-d81c-11eb-9d43-69fb5040821a.png">
 
+<br>
 
 
 **Summary**
